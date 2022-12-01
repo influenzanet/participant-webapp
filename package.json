@@ -1,6 +1,6 @@
 {
   "name": "influenzanet",
-  "version": "1.0.0",
+  "version": "1.14.1-0",
   "private": true,
   "dependencies": {
     "@fontsource/open-sans": "^4.2.1",
