@@ -27,14 +27,6 @@ if (process.env.REACT_APP_DEFAULT_INSTANCE) {
 
 const App: React.FC = () => {
 
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    if (!i18n.language) {
-      i18n.changeLanguage(`${process.env.REACT_APP_DEFAULT_LANGUAGE}`);
-    }
-  }, [i18n, i18n.language]);
-
   return (
     <React.Fragment>
       <AppCore
