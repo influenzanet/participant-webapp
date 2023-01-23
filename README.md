@@ -56,30 +56,6 @@ Example content for the `results.json` file:
 - `route`: selector that will be used in the url to navigate to the page.
 - `markdown`: path where the markdown definition for the page can be found.
 
-### Markdown for the results page
-
-Content for the subpages of the result container is defined through markdown files.
-Beside the typical markdown structures, e.g., headings, paragraphs and lists, the following content type is supported:
-
-- **vega**: To display a figure defined by vega specification.
-- **mapchart:<url-to-map-json>**: map based visualisation.
-- **images**: Images from URL and with caption.
-
-Example markdown content:
-
-```markdown
-This is a [link](https://www.rivm.nl/infectie-radar/resultaten) pointing to an external page's url.
-
-## Example title
-You can add vega spec files like this:
-
-[vega]: content/en/results/week42-map.json
-
-Images with titles:
-
-![Alternative text for accesibility](content/nl/results/week42-symptomen.png "Caption of the image")
-```
-
 ## Production Environment Setup
 
 1. Copy `env-sample.config` to `.env-local`
