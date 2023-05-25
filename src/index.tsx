@@ -12,9 +12,18 @@ import '@fontsource/open-sans';
 // import "@fontsource/open-sans/300.css"; // for light font
 import '@fontsource/open-sans/400-italic.css';
 import '@fontsource/open-sans/700.css';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/brands';
-import '@fortawesome/fontawesome-free/js/fontawesome';
+import {
+  faHome,
+  faSignOutAlt,
+  faCog,
+  faArrowRight,
+  faArrowLeft,
+  faBars,
+  faPen,
+  faTrash,
+} from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
 
 import 'bootstrap/dist/js/bootstrap.bundle';
 
@@ -25,6 +34,9 @@ const defaultLanguage = process.env.REACT_APP_DEFAULT_LANGUAGE ?? 'en';
 const fallbackLanguage = process.env.REACT_APP_FALLBACK_LANGUAGE ?? 'en';
 
 initI18n(defaultLanguage, fallbackLanguage, localeURL);
+
+library.add(faHome, faSignOutAlt, faCog, faArrowRight, faArrowLeft, faBars, faPen, faTrash, faTwitter, faFacebook);
+dom.watch();
 
 ReactDOM.render(
   <React.StrictMode>
