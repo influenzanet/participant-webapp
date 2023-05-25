@@ -10,23 +10,20 @@ import { PagesConfig } from 'case-web-app-core/build/types/pagesConfig';
 
 import { it } from 'date-fns/locale';
 
-import * as appConfig from "./configs/appConfig.json";
-import * as footerConfig from "./configs/footer.json";
-import * as headerConfig from "./configs/header.json";
-import * as navbarConfig from "./configs/navbar.json";
-import * as pagesConfig from "./configs/pages.json";
+import * as appConfig from './configs/appConfig.json';
+import * as footerConfig from './configs/footer.json';
+import * as headerConfig from './configs/header.json';
+import * as navbarConfig from './configs/navbar.json';
+import * as pagesConfig from './configs/pages.json';
 
-const dateLocales = [
-  { code: 'it', locale: it, format: 'dd/MM/yyyy' }
-];
+const dateLocales = [{ code: 'it', locale: it, format: 'dd/MM/yyyy' }];
 
-let appConfig_: AppConfig  = {...appConfig};
+let appConfig_: AppConfig = { ...appConfig };
 if (process.env.REACT_APP_DEFAULT_INSTANCE) {
   appConfig_.instanceId = process.env.REACT_APP_DEFAULT_INSTANCE;
 }
 
 const App: React.FC = () => {
-
   return (
     <React.Fragment>
       <AppCore
